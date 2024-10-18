@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: rgb(68, 6, 92);
+    
+}
+.navbar .navbar-collapse .navbar-nav .nav-item .nav-link  {
+    color:white;
+    font-weight: bold;
+    font-size: larger;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+
+.footer{
+    color:white;
+    background-color: rgb(68, 6, 92);
+    padding: 50px;
+}
+button{
+    color: aliceblue;
+}
+.card-img-top {
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.card-img-top:hover {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+/* Only for navbar links */
+.navbar-nav .nav-link {
+    color: #004187;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffca0a;
+    text-decoration: underline;
+    transform: scale(1.1)
+}
+
+

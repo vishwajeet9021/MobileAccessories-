@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="./classwebsite.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+        })();
+
+        function sendEmail(e) {
+            e.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const templateParams = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    alert('Message sent successfully!', response.status, response.text);
+                }, function(error) {
+                    alert('Failed to send message. Please try again.', error);
+                });
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./project img/mobileshop logo.png" height="65px" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./classwebsite.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./redirect/contactus.html">CONTACT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./redirect/aboutus.html">ABOUT US</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUCTS</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">APPLE IPHONE</a></li>
+                            <li><a class="dropdown-item" href="#">HEADPHONES</a></li>
+                            <li><a class="dropdown-item" href="#">COVER</a></li>
+                            <li><a class="dropdown-item" href="#">CHARGER</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./redirect/login.html">LOGIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">SERVICES</a></li>
+                    <a href="#" class="cartButton" onclick="addToCart()">
+                        <i class="fa-solid fa-cart-shopping" style="color: #FFD43B; font-size: 35px;"></i>
+                    </a>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!------------ Contact Us Section ------------>
+    <section class="contactSection py-5">
+        <div class="container">
+            <h1 class="text-center mb-4" style="color: rgb(95, 4, 14);">Contact Us</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Get in Touch</h4>
+                    <form onsubmit="sendEmail(event)">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h4>Contact Information</h4>
+                    <p>If you have any questions, feel free to reach out to us!</p>
+                    <p>Email: <a href="mailto:support@yourshoppingwebsite.com">support@yourmobilewebsite.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+                    <h5>Follow Us</h5>
+                    <div>
+                        <a href="#" class="text-dark me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-dark me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-dark me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-dark"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------ Footer Section ------------>
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="./project img/mobileshop logo.png" height="100" alt="Logo">
+                    <p>We are proud to meet our customer’s expectations with respect to Quality and On Time Delivery. Thank you for your interest in our mobile shop.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Products & Services</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Apple</a></li>
+                        <li><a href="#" class="text-light">Smartphones</a></li>
+                        <li><a href="#" class="text-light">Accessories</a></li>
+                        <li><a href="#" class="text-light">Home Appliances</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:support@yourshoppingwebsite.com" class="text-light">support@yourmobilewebsite.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890" class="text-light">+1 234 567 890</a></p>
+                    <h5>Follow Us</h5>
+                    <div>
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center mt-4">
+                <div class="col-12">
+                    <p>&copy; 2024 [Your Shopping Website]. All Rights Reserved.</

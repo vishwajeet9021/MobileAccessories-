@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./classwebsite.css">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="classwebsite.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./project img/mobileshop logo.png" height="65px" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="./classwebsite.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./redirect/contactus.html">CONTACT US</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./redirect/aboutus.html">ABOUT US</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUCTS</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">APPLE IPHONE</a></li>
+                            <li><a class="dropdown-item" href="#">HEADPHONES</a></li>
+                            <li><a class="dropdown-item" href="#">COVER</a></li>
+                            <li><a class="dropdown-item" href="#">CHARGER</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./redirect/login.html">LOGIN</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">SERVICES</a></li>
+                    <a href="#" class="cartButton" onclick="addToCart()">
+                        <i class="fa-solid fa-cart-shopping" style="color: #FFD43B; font-size: 35px;"></i>
+                    </a>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!------------ About Us Section ------------>
+    <section class="aboutSection py-5">
+        <div class="container">
+            <h1 class="text-center mb-4" style="color: rgb(95, 4, 14);">About Us</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Our Mission</h4>
+                    <p>At [Your Shopping Website], our mission is to provide top-quality mobile products and accessories that meet our customers' needs. We strive for excellence in customer service and aim to create a seamless shopping experience.</p>
+                    <h4>Who We Are</h4>
+                    <p>Founded in [Year], we are a passionate team dedicated to bringing you the latest and best mobile technology. With years of experience in the industry, we understand what our customers want and how to deliver it.</p>
+                    <h4>What We Offer</h4>
+                    <p>From smartphones to accessories, we offer a wide range of products that cater to every mobile need. Our goal is to keep you connected and satisfied with your purchases.</p>
+                    <h4>Contact Us</h4>
+                    <p>If you have any questions or need assistance, feel free to <a href="./redirect/contactus.html">contact us</a>. We are here to help!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------ Footer Section ------------>
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="./project img/mobileshop logo.png" height="100" alt="Logo">
+                    <p>We are proud to meet our customer’s expectations with respect to Quality and On Time Delivery. Thank you for your interest in our mobile shop.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Products & Services</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Apple</a></li>
+                        <li><a href="#" class="text-light">Smartphones</a></li>
+                        <li><a href="#" class="text-light">Accessories</a></li>
+                        <li><a href="#" class="text-light">Home Appliances</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>Email: <a href="mailto:support@yourshoppingwebsite.com" class="text-light">support@yourmobilewebsite.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890" class="text-light">+1 234 567 890</a></p>
+                    <h5>Follow Us</h5>
+                    <div>
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center mt-4">
+                <div class="col-12">
+                    <p>&copy; 2024 [Your Shopping Website]. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
